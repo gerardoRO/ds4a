@@ -1,0 +1,86 @@
+landfree = column that describes property rights category including eminent domain reform and land-use regulations. Almost all its weight omes from two variables: local rent control laws and an index of residentail land-use regulations. The remainder takes into account whether compensation or an economic assessment is required before a reulatory taking, an index of eminent domain reform, and whether free speech is mandated on private property. The category contains the following variables:
+
+local rent control
+regulatory taking restrictions
+mandated free speech on private property
+Wharton residential land use
+eminent domain index
+
+
+frent : local rent control laws exist (2006 - 2016)
+0 = no
+1 = yes
+source: Sorens, Jason, Fait Muedini, and Willian P Ruger. 'State and Local Public Policies in 2006: A New Database State Politiccs & Policy Quartely 8.3 (2008): 309-26
+
+regulation_rent_control : does state prohibit the passage of rent control laws in itscities or municipalities? (1950 - 2014)
+
+0 = no 1 = yes
+source: https://dataverse.harvard.edu/dataset.xhtml?persisentId=doi:10.7910/DVN/ZXZMJB
+
+
+housing_prices_quar : When 'is_a_quarter' = 1 this represents quarterly housing prices (1980q1 = 1 for all states). All transaction index estimated using sales prices and appraisal data. Data isn't seasonally adjusted. When quar=2.5 this represents the average from the same indicator for the f our quarters of the calendar year (1975- 2012)
+source: http://www.fhfa.gov/Default.aspx?Page=87
+
+
+
+ahcdpi : housing and community development spending, % of income (ahcdspt / apersinc).
+
+ahcdpia: Unexpected housing spending (modified by agrantspi, equation derived from diff-in-diff estimates)
+
+ahcdspt : State and local government and communtiy development direct expenditure, in millions of dollars
+
+The above 3 are collected from:
+
+Sorens, jason, Fait Muedini, and William P Ruger. 'State and Local Public Policies in 2006: A new Database.' State Politics & Policy Quarterly 8.3 (2008): 309-26.
+(957-2015)
+
+
+ig_cons: Number of construction and housing interest groups registered in the state. Includes groups such as: construction associations, construction firms, landlord associations, tenant unions. (1980, 1990, 1998, 1999, 2007).
+Source: Gray, Virgina and David Lowery. 'Interest group politics and econmic growth in the US States'. The american political science review 82.1 (1988): 109-131. Lowery, David, Virginia Gray, and John Cluverius. 'Temporal Change in the Density of State Interest Communities 1980 -2007.' State Politics & Policy Quarterly 15.2 (2015): 263: 286.
+
+
+ndl_housing : 0 = state does not have any housing non-disccriination laws
+1 = the state has a housing non-discrimination law that applies to sexual orientation only (LGB)
+2 = the state has a housing non-discrimination law that applies to sexual orientation AND gender identity (LGBT)
+source: https://www.lgbtmap.org/equality-maps/non-discrimination_laws
+(2019)
+
+fhpriv : did state adopt fair housing laws for private housing (0 = no , 1 y =es);
+Sourcce: Boehmke, Frederick J.,and Paul Skinner. 'State policy innovativeness revisited.' State Politics & Policy Quarterly 12.3 (2012): 303-329. (1959 - 1965)
+
+fhpub :  did state adopt fair housing laws for public housing (0 = no , 1 y =es);
+Sourcce: Boehmke, Frederick J.,and Paul Skinner. 'State policy innovativeness revisited.' State Politics & Policy Quarterly 12.3 (2012): 303-329. (1937-1961)
+
+fhurb :  did state adopt fair housing laws for urban renewal areas (0 = no , 1 y =es);
+Sourcce: Boehmke, Frederick J.,and Paul Skinner. 'State policy innovativeness revisited.' State Politics & Policy Quarterly 12.3 (2012): 303-329. (1945 - 1964)
+l
+race_boehmke_fhpub : dDoes the state ban discrimination in public housing? (0 = no , 1 = yes)
+Source: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/ZXZMJB
+(1937 - 1965)
+
+w_race_fair_housing_private : Does the state ban discrimination in private housing? (0 = no , 1 = any fair housing law, 2 = includes owner-occupied housing, OR excludes owner-occupied housing, but includes all real estate broker actiivites)
+Source: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/ZXZMJB
+(1959 - 1968)
+
+pubhouen : Did state adopt legistlation enabling public housing? (0 = no, 1 = yes). 
+Sourcce: Boehmke, Frederick J.,and Paul Skinner. 'State policy innovativeness revisited.' State Politics & Policy Quarterly 12.3 (2012): 303-329. (1933-1950)
+
+regulation_housing_direcstate ai : Does the state provide direct aid for urban housing? (0 = no , 1 = yes)
+Source: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/ZXZMJB
+(1939 - 1951)
+
+regulation_housing_enabling_federal_aid : Does the state have a law enabling federal housing aid? (0 = no ,1 = yes)?
+Source: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/ZXZMJB
+(1939 - 1953)
+
+
+-------- NEED TO INVESTIGATE FURTHER
+
+source: Uniform Law Commission website
+http://www.uniformlaws.org/Frederick J. Boehmke; Mark Brockwa; Bruce Desmarais; Jefrrey J Harden ; Scott LaCombe; Fridoli Lnider; Hanna Wallach, 2018, ' State Policy INnovation and Diffusion (SPID) Databse v1.0',
+https://doi.org/10.7910/DVN/CVYSR7
+
+residential_landlord_and_tenant = 1972- 2006 0 = policy not adopted, 1 = policy adopted 
+residential_mortgage_satisfactio  = 2005-2014 0 = policy not adopted, 1 = policy adopted 
+
+
