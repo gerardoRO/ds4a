@@ -29,6 +29,7 @@ df['Rent50'] = df['Rent50'] * 1.36 *12
 #Adjust prices for income
 df['Income_Adjusted_FMR0'] = df['FMR0'] / df['MedianIncome']
 df['Income_Adjusted_Rent50']  = df['Rent50']  / df['MedianIncome']
+df['Income_Adjusted_HousingPrices']  = df['Housing_Prices_Quarter']  / df['MedianIncome']
 
 #Identify afffordability
 df['Affordability_Price_Point'] = df['MedianIncome'] * .3
@@ -49,15 +50,9 @@ cat_cols = ['Private_Fair_Housing','No_Discrimination_Laws',
              'Legislation_Public_Housing','Rent_Control',
              'State_Aid_Allowed','Federal_Aid_Allowed','Prohibit_Rent_Control']
 for col in cat_cols:
-    if len(df[col].unique()==2):
-        df[col] = df[col].map({0.:False,1.0:True})
-        print(f'Unique cols in {col}: ' + str(df[col].unique()))
-    elif  np.isin(10.,df[col].unique()):
-        df[col] = df[col].map({0.:False,1.0:True,10.0:np.NaN})
-        print(f'Unique cols in {col}: ' + str(df[col].unique()))
-    elif  np.isin(2.,df[col].unique()):
-        df[col] = df[col].map({0.:False,1.0:True,2.0:True})
-        print(f'Unique cols in {col}: ' + str(df[col].unique()))
+    print(f'Unique cols in {col}: ' + str(df[col].unique()))
+    df[col] = df[col].map({0.:False,1.0:True,2.0:True,10.0:True})
+    print(f'Unique cols in {col}: ' + str(df[col].unique()))
         
 df['Metro'] = df['Metro'].map({1:True,0:False})        
 df.to_csv(dataset_folder +'current_final_datset.csv',index =False)

@@ -138,3 +138,5 @@ datasets/06-12ds4a.csv
 combo.csv
 random_forest_regressor
 datasets/current_final_datset.csv
+code/sgd_model_220209.pkl
+.vscode/launch.json
