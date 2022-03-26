@@ -140,3 +140,7 @@ random_forest_regressor
 datasets/current_final_datset.csv
 code/sgd_model_220209.pkl
 .vscode/launch.json
+code/tree_map_v2.svg
+regression_plot.png
+tree_map.png
+regression_plot2.png
